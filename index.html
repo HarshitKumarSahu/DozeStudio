@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doze_Studio</title>
+    <link rel="icon" href="./Untitled-design-unscreen.gif">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <style>
+        @media (width < 600px) {
+            .cursor  {
+                display: none;
+            }
+            .panelism .line {
+                display: none;
+            }
+            .animate2 h1 {
+                display: none;
+            }
+            html.lenis {
+                height: auto;
+            }
+            .lenis.lenis-smooth {
+                scroll-behavior: auto;
+            }
+            .lenis.lenis-smooth [data-lenis-prevent] {
+                overscroll-behavior: contain;
+            }
+            .lenis.lenis-stopped {
+                overflow: hidden;
+            }
+            .lenis.lenis-scrolling iframe {
+                pointer-events: none;
+            }
+            .left {
+                display: none;
+            }
+            .right {
+                width: 100% !important;
+            }
+            .right h3 {
+                font-size: 10vw !important;
+            }
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1f1f1f;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3f3f3f;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class=" main w-full bg-zinc-900">
+        <div class="cursor h-[15px] w-[15px] bg-[#f8f8f8] rounded-full fixed z-[4]"></div>
+        <div class="parent relative w-full h-[2000vh] bg-zinc-900">
+            <div class="nav h-[50px] w-full bg-transparent fixed z-[3]">
+                <h3 class="text-xl text-white p-5 mx-3 flex ">Doze - Studio <img src="./Untitled-design-unscreen.gif" class="mx-3 w-[30px]" alt=""></h3>
+            </div>
+            <div class="child sticky top-0 left-0 w-full h-screen overflow-x-hidden z-[2] bg-zinc-900">
+                <canvas id="canvas" class="w-full h-screen"></canvas>
+                <div class="absolute animate1 z-[2] text-white bottom-10 w-1/2 left-10">
+                    <h1 class="leading-20 font-[100] text-3xl"> &copy; 2024 DOZE STD</h1>
+                    <h1 class="text-3xl">SHAPING BRANDS &rarr; CRAFTING MOTION</h1>
+                </div>
+                <div class="absolute animate2 flex z-[2] text-white bottom-10 w-1/2 right-10 text-right opacity-0">
+                    <h1 class="leading-20 font-[100] uppercase text-6xl "> transforming visions</h1>
+                    <h1 class="text-xl w-1/2">Building identity and inspiration action. Sculpting digital experience resonate</h1>
+                </div>
+                <div class="absolute animate3 z-[2] text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center opacity-0">
+                    <h1 class="leading-20 font-[200] uppercase text-6xl">Elevating Aesthetics</h1>
+                    <h1 class="text-xl font-[100]">Crafting solutions and exploring new horizons. Evolving narratives and elevating aesthetics in every projects</h1>
+                </div>
+                <div class="w-[350px] panel translate-x-full h-screen bg-white absolute right-0 top-0 z-[2] p-10">
+                    <h3 class="panelelem text-xl font-[100]">© 2024 Doze.Std</h3>
+                    <p class="panelelem mt-10 text-xl">
+                        Sculpting Digital  
+                        Transforming visions into digital realities. Weaving stories that captivate and innovate.  
+                        Exploring new possibilities with a focus on narrative evolution. Crafting solutions that engage and elevate.
+                    </p>
+                    <button class="panelelem border-[1px] px-3 py-2 border-[#555] font-[100] mt-6">Get Reviews →</button>
+                    
+                    <div class="panelelem absolute bottom-10">
+                        <h3 class="text-xl">Innovating Design</h3>
+                        <p class="text-sm mt-3">
+                            Connecting ideas to foster creativity. Designing impactful experiences that  
+                            resonate.  
+                            Feel free to mix and match these sections to suit your website's design needs!
+                        </p>
+                        <button class="bg-black text-white px-7 text-sm mt-4 py-4 font-[100] capitalize">experience</button>
+                    </div>
+                </div>
+                <div class="absolute panelism z-[2] text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-6xl tracking-tighter opacity-0">
+                    &copy;Panelism <span class="line w-10 h-1 bg-white inline-block"></span>2040
+                </div>
+            </div>
+        </div>
+        <div class="works w-full  p-10 bg-white z-[3] relative flex flex-row items-start justify-center">
+            <div class="left m-8 w-[50%] ">
+                <div class="container">
+                    <div class="imagesCont h-[31.25vw] w-[31.25vw] overflow-hidden">
+                        <img src="./divImg/001.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mt-2">Motion Design</h3>
+                    <p class="text-sm w-1/2">Title animation 'Lost Between Worlds' for FarCry 6 in-game and for its promotional campaign.</p>
+                </div>
+            </div>
+            <div class="right w-[50%]">
+                <!-- <h1 class="text-5xl w-full text-start tracking-tighter ">&reg; Recent Works.</h1> -->
+                <div class="headding w-[100%] p-5 mt-25 flex flex-col items-start justify-center">
+                    <h3 class="text-6xl" style="line-height: 1.5;">Zonk Blerp</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Flibble Sprock</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Wibble Zurf</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Droop Zonk</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Snarp Woogle</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Frizzle Bump</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Plonk Zorp</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Slibber Klop</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Glonk Dribble</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Twizzle Blurb</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Skribble Zink</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Quibble Plop</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Blizzy Nerp</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Fuzzle Droop</h3>
+                    <h3 class="text-6xl" style="line-height: 1.5;">Krinkle Slap</h3>
+                </div>
+            </div>
+            
+        </div>
+        <div class="h-[65vh] w-full bg-transparent"></div>
+        <div class="flex justify-between w-full fixed bottom-0 left-0 text-white items-start px-12 py-8 z-[1] ">
+            <div class="space-y-10">
+                <div>
+                    <h2 class="text-xl font-extralight uppercase font-200">Project Inquires</h2>
+                    <p class="mt-2 text-sm w-3/4 font-thin">Ready to work with us ?<br>
+                    Reach out to discuss how we can help you build a strong digital brand presence.</p>
+                    <p class="mt-2 italic text-sm ">hello@doze-studio.com</p>
+                </div>
+                <div>
+                    <h2 class="text-xl font-extralight uppercase">Our Office</h2>
+                    
+                    <p class="mt-4 text-sm leading-relaxed font-thin leading-tight">
+                        Doze Studio<br>
+                        1b rue Baron<br>
+                        44 000 Nantes<br>
+                        France
+                    </p>
+                </div>
+            </div>
+            <div class="space-y-8 text-right">
+                <div>
+                    <img src="./Untitled-design-unscreen.gif" alt="Doze Logo" class="w-16 mt-1 ml-auto">
+                </div>
+                <p class="text-sm">Legals</p>
+                <div>
+                    <h2 class="text-xl font-extralight uppercase">Networks</h2>
+                    <p class="mt-4 text-sm leading-tight">+33 2 85 52 19 62</p>
+                    <div class="mt-2">
+                        <a href="#" class="block font-thin text-sm hover:underline leading-tight">Instagram</a>
+                        <a href="#" class="block font-thin text-sm hover:underline leading-tight">LinkedIn</a>
+                        <a href="#" class="block font-thin text-sm hover:underline leading-tight">Giphy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script> 
+
+    <script>
+
+
+        const lenis = new Lenis({
+            duration: 2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            orientation: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothWheel: true,
+            wheelMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        const main = document.querySelector(".main");
+        
+        if (window.innerWidth > 600) {
+            main.addEventListener("mousemove", (dets) => {
+                gsap.to(".cursor", {
+                    x: dets.x,
+                    y: dets.y,
+                    duration: 1
+                });
+            });
+        }
+
+        document.querySelector(".works").addEventListener("mouseenter", function() {
+            gsap.to(".cursor" , {
+                backgroundColor : "#000" ,
+                duration : 0.5
+            })
+        });
+
+        document.querySelector(".works").addEventListener("mouseleave", function() {
+            gsap.to(".cursor" , {
+                backgroundColor : "#f8f8f8" ,
+                duration : 0.5
+            })
+        });
+
+        const canvas = document.querySelector("#canvas");
+        const context = canvas.getContext("2d");
+
+        const frames = {
+            currentIndex : 1 ,
+            maxIndex : 1345
+        }
+
+        let imageLoaded = 0;
+        let images = [];
+
+        function preloadImages() {
+            for(let i=1 ; i<=frames.maxIndex ; i++) {
+                const imageUrl = `./frames/frame_${i.toString().padStart(4 , "0")}.jpg`;
+                const img = new Image();
+                img.src = imageUrl
+                img.onload = () => {
+                    imageLoaded++;
+                    if(imageLoaded === frames.maxIndex) {
+                        loadImages(frames.currentIndex);
+                        startAnimation()
+                    }
+                }
+                images.push(img)
+            }
+        }
+
+        function loadImages(index) {
+            if(index >= 0 && index <= frames.maxIndex) {
+                const img = images[index];
+                
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+
+                const scaleX = canvas.width / img.width;
+                const scaleY = canvas.height / img.height;
+                const scale = Math.max(scaleX,scaleY);
+
+                const newWidth = img.width * scale;
+                const newHeight = img.height * scale;
+
+                const offsetX = (canvas.width - newWidth) / 2;
+                const offsetY = (canvas.height - newHeight) / 2
+
+
+                context.clearRect(0 , 0 , canvas.width , canvas.height);
+                context.imageSmoothingEnabled = true;
+                context.imageSmoothingQuality = "high";
+                context.drawImage(img , offsetX , offsetY , newWidth , newHeight)
+
+                frames.currentIndex = index
+            }
+        }
+
+        function startAnimation() {
+            let tl = gsap.timeline({
+                scrollTrigger : {
+                    trigger : ".parent",
+                    start : "top top",
+                    end : "bottom bottom",
+                    scrub : 2
+                }
+            })
+
+            function updateFrame(index) {
+                return {
+                    currentIndex : index,
+                    ease : "linear",
+                    onUpdate : () => {
+                        loadImages(Math.floor(frames.currentIndex));
+                    }
+                }
+            }
+
+            tl
+                .to(frames , updateFrame(100) , "first")
+                .to(".animate1" , {opacity : 0 , ease : "linear"} , "first")
+
+                .to(frames , updateFrame(200) , "second")
+                .to(".animate2" , {opacity : 1 , ease : "linear"} , "second")
+
+                .to(frames , updateFrame(300) , "three")
+                .to(".animate2" , {opacity : 0 , ease : "linear"} , "three")
+
+                .to(frames , updateFrame(380) , "fourth")
+                .to(".animate3" , {opacity : 1 , ease : "linear"} , "fourth")
+
+                .to(frames , updateFrame(460) , "fifth")
+                .to(".animate3" , {opacity : 1 , ease : "linear"} , "fifth")
+
+                .to(frames , updateFrame(540) , "sixth")
+                .to(".animate3" , {opacity : 0 , ease : "linear"} , "sixth")
+
+                .to(frames , updateFrame(600) , "seventh")
+                .to(".panel" , {x : "0%" , ease : "expo"} , "seventh")
+
+                .to(frames , updateFrame(680) , "eighth")
+                .to(".panel" , {x : "0%" , ease : "expo"} , "eighth")
+
+                .to(frames , updateFrame(750) , "ninth")
+                .to(".panel" , { opacity : 0 , ease : "linear"} , "ninth")
+
+                // top perfect
+
+                .to(frames , updateFrame(800) , "tenth")
+                .to("canvas" , { scale : 0.5 , ease : "linear"} , "tenth")
+
+                .to(frames , updateFrame(900) , "eleventh")
+                .to(".panelism" , { opacity : 1 , ease : "expo"} , "eleventh")
+
+                .to(frames , updateFrame(950) , "eleventh")
+                .to(".panelism span" , { width : 200 , ease : "expo"} , "eleventh")
+
+                .to(frames , updateFrame(1050) , "twelfth")
+                .to("canvas" , { scale : 1 , ease : "linear"} , "twelfth")
+
+                .to(frames , updateFrame(1150) , "thirteen")
+                .to(".panelism" , { scale : 1.6 , ease : "linear"} , "thirteen")
+
+                .to(frames , updateFrame(1320) , "fourteen")
+                .to(".panelism" , { scale : 1.6 , ease : "linear"} , "fourteen")
+
+        }
+
+        window.addEventListener("resize" , ()=>{
+            loadImages(Math.floor(frames.currentIndex));
+        })
+
+        preloadImages()
+
+
+        // document.querySelectorAll(".headding h3")
+        // .forEach((elem)=> {
+        //     gsap.from(elem, {
+        //         scrollTrigger : {
+        //             trigger : elem ,
+        //             start : "top 90%",
+        //             end : "bottom 20%",
+        //             scrub : 2
+        //         },
+        //         opacity : 0.5
+        //     })
+        // })
+        ScrollTrigger.create ({
+            trigger : ".works",
+            start : "top top",
+            end : "bottom bottom",
+            pin : ".left "
+        })
+        
+        let h3s = document.querySelectorAll(".headding h3");
+        let imagesCont = document.querySelector(".imagesCont img");
+        let imageschng = [
+            "./divImg/001.jpg",
+            "./divImg/002.jpg",
+            "./divImg/003.jpg", 
+            "./divImg/004.jpg",
+            "./divImg/005.jpg",
+            "./divImg/006.jpg",
+            "./divImg/007.jpg",
+            "./divImg/008.jpg", 
+            "./divImg/009.jpg",
+            "./divImg/010.jpg",
+            "./divImg/011.jpg",
+            "./divImg/012.jpg",
+            "./divImg/013.jpg",
+            "./divImg/014.jpg",
+            "./divImg/015.jpg"
+        ];
+
+        h3s.forEach((h3, index) => {
+            h3.addEventListener("mouseenter", () => {
+                // Fade out other h3s
+                h3s.forEach(otherH3 => {
+                    if(otherH3 !== h3) {
+                        otherH3.style.opacity = "0.3";
+                    }
+                });
+                h3.style.opacity = "1";
+                
+                // Change image with fade effect
+                imagesCont.style.opacity = "0";
+                imagesCont.src = imageschng[index];
+                requestAnimationFrame(() => {
+                    imagesCont.style.opacity = "1";
+                });
+            });
+
+            h3.addEventListener("mouseleave", () => {
+                h3s.forEach(otherH3 => {
+                    otherH3.style.opacity = "1";
+                });
+            });
+        });
+        
+        
+
+
+    </script>
+</body>
+</html>
